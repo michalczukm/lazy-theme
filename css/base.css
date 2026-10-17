@@ -11,13 +11,28 @@
   accent-color: var(--lazy-color-accent);
 }
 
-.lazy-theme :where(*, *::before, *::after) { box-sizing: border-box; }
-.lazy-theme :where([hidden]) { display: none !important; }
-.lazy-theme :where(body) { margin: 0; }
-.lazy-theme :where(button, input, select, textarea) { font: inherit; color: inherit; }
-.lazy-theme :where(button, a, input, select, textarea) { -webkit-tap-highlight-color: transparent; }
-.lazy-theme :where(button, a) { touch-action: manipulation; }
-.lazy-theme :where(button) { cursor: pointer; }
+.lazy-theme :where(*, *::before, *::after) {
+  box-sizing: border-box;
+}
+.lazy-theme :where([hidden]) {
+  display: none !important;
+}
+.lazy-theme :where(body) {
+  margin: 0;
+}
+.lazy-theme :where(button, input, select, textarea) {
+  font: inherit;
+  color: inherit;
+}
+.lazy-theme :where(button, a, input, select, textarea) {
+  -webkit-tap-highlight-color: transparent;
+}
+.lazy-theme :where(button, a) {
+  touch-action: manipulation;
+}
+.lazy-theme :where(button) {
+  cursor: pointer;
+}
 .lazy-theme :where(button:disabled, input:disabled, select:disabled, textarea:disabled) {
   cursor: not-allowed;
   opacity: 0.55;
@@ -26,15 +41,26 @@
   color: var(--lazy-color-accent);
   text-underline-offset: var(--lazy-space-1);
 }
-.lazy-theme :where(input, textarea) { caret-color: var(--lazy-color-accent); }
-.lazy-theme :where(p, h1, h2, h3) { margin: 0; }
-.lazy-theme :where(h1, h2, h3) { text-wrap: balance; }
-.lazy-theme :where(img, svg) { max-inline-size: 100%; }
+.lazy-theme :where(input, textarea) {
+  caret-color: var(--lazy-color-accent);
+}
+.lazy-theme :where(p, h1, h2, h3) {
+  margin: 0;
+}
+.lazy-theme :where(h1, h2, h3) {
+  text-wrap: balance;
+}
+.lazy-theme :where(img, svg) {
+  max-inline-size: 100%;
+}
 .lazy-theme :where(:focus-visible) {
   outline: var(--lazy-focus-width) solid var(--lazy-color-focus);
   outline-offset: var(--lazy-focus-offset);
 }
-.lazy-theme ::selection { background: var(--lazy-action-bg); color: var(--lazy-color-on-accent); }
+.lazy-theme ::selection {
+  background: var(--lazy-action-bg);
+  color: var(--lazy-color-on-accent);
+}
 
 @media (prefers-reduced-motion: reduce) {
   .lazy-theme :where(*, *::before, *::after) {

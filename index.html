@@ -1,26 +1,37 @@
 <!doctype html>
 <html lang="en" class="lazy-theme" data-lazy-theme="light">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The shared visual language for lazy applications. Colors, typography, components and light and dark themes.">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="The shared visual language for lazy applications. Colors, typography, components and light and dark themes."
+    />
     <title>lazy-theme — design system</title>
-    <link rel="icon" href="data:,">
-    <link rel="stylesheet" href="theme.css">
-    <link rel="stylesheet" href="catalog.css">
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="catalog.css" />
     <script src="catalog.js"></script>
   </head>
   <body>
     <svg class="catalog-symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
-      <symbol id="icon-bowl" viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 0 1-18 0ZM7 7V4m5 3V3m5 4V4M7 21h10"/></symbol>
-      <symbol id="icon-list" viewBox="0 0 24 24"><path d="m3 6 1 1 2-2m-3 7 1 1 2-2m-3 7 1 1 2-2M10 6h11M10 12h11M10 18h11"/></symbol>
-      <symbol id="icon-refresh" viewBox="0 0 24 24"><path d="M20 8a8 8 0 1 0 0 8M20 3v5h-5"/></symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6" /></symbol>
+      <symbol id="icon-bowl" viewBox="0 0 24 24">
+        <path d="M3 12h18a9 9 0 0 1-18 0ZM7 7V4m5 3V3m5 4V4M7 21h10" />
+      </symbol>
+      <symbol id="icon-list" viewBox="0 0 24 24">
+        <path d="m3 6 1 1 2-2m-3 7 1 1 2-2m-3 7 1 1 2-2M10 6h11M10 12h11M10 18h11" />
+      </symbol>
+      <symbol id="icon-refresh" viewBox="0 0 24 24">
+        <path d="M20 8a8 8 0 1 0 0 8M20 3v5h-5" />
+      </symbol>
     </svg>
     <a class="lazy-skip-link" href="#main">Skip to content</a>
     <div class="lazy-page">
       <header class="lazy-header">
-        <a class="lazy-wordmark" href="./" aria-label="lazy-theme home">lazy-theme<span aria-hidden="true">.</span></a>
+        <a class="lazy-wordmark" href="./" aria-label="lazy-theme home"
+          >lazy-theme<span aria-hidden="true">.</span></a
+        >
         <div class="catalog-theme-control">
           <label class="lazy-label" for="theme-switch">Appearance</label>
           <select class="lazy-field" id="theme-switch">
@@ -33,12 +44,18 @@
       <main id="main" tabindex="-1">
         <div class="catalog-intro">
           <div>
-            <h1 class="lazy-heading">One familiar place.<br>Every lazy app.</h1>
-            <p class="catalog-lead lazy-prose">Readable type, quiet surfaces, room to think. The shared foundation from lazy-tea and the lazy Firefox dashboard, ready for the next application.</p>
+            <h1 class="lazy-heading">One familiar place.<br />Every lazy app.</h1>
+            <p class="catalog-lead lazy-prose">
+              Readable type, quiet surfaces, room to think. The shared foundation from lazy-tea and
+              the lazy Firefox dashboard, ready for the next application.
+            </p>
           </div>
           <div class="catalog-intro-note">
             <p id="theme-description">Warm paper. Green ink. The original shared baseline.</p>
-            <a href="docs/usage.md">Use the system <svg class="catalog-icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+            <a href="docs/usage.md"
+              >Use the system
+              <svg class="catalog-icon" aria-hidden="true"><use href="#icon-arrow" /></svg
+            ></a>
           </div>
         </div>
         <nav class="catalog-nav" aria-label="On this page">
@@ -51,23 +68,43 @@
         <section id="foundations" class="catalog-section" aria-labelledby="foundations-title">
           <div class="catalog-section-heading">
             <h2 id="foundations-title" class="lazy-heading">The essentials</h2>
-            <p class="lazy-prose lazy-note">One set of semantic tokens. Switch appearance to compare the same roles in both themes.</p>
+            <p class="lazy-prose lazy-note">
+              One set of semantic tokens. Switch appearance to compare the same roles in both
+              themes.
+            </p>
           </div>
           <div class="catalog-foundations">
             <div>
               <h3 class="lazy-title">Color with a purpose</h3>
               <dl id="palette" class="catalog-palette"></dl>
-              <noscript><p class="lazy-note">Enable JavaScript to inspect color values and switch appearance. Components below remain visible.</p></noscript>
+              <noscript
+                ><p class="lazy-note">
+                  Enable JavaScript to inspect color values and switch appearance. Components below
+                  remain visible.
+                </p></noscript
+              >
             </div>
             <div class="catalog-type">
               <h3 class="lazy-title">Atkinson Hyperlegible Next</h3>
-              <p class="catalog-type-sample">Clear at a glance.<br>Comfortable up close.</p>
-              <p class="lazy-prose">One family, three weights. Regular for reading and large numbers, semibold for decisions, bold for the wordmark.</p>
+              <p class="catalog-type-sample">Clear at a glance.<br />Comfortable up close.</p>
+              <p class="lazy-prose">
+                One family, three weights. Regular for reading and large numbers, semibold for
+                decisions, bold for the wordmark.
+              </p>
               <div class="catalog-number-samples">
-                <div><p class="lazy-note">Large reading · 400</p><p class="lazy-display">2:00</p></div>
-                <div><p class="lazy-note">Value · 600</p><p class="lazy-value">350<span class="lazy-unit">ml</span></p></div>
+                <div>
+                  <p class="lazy-note">Large reading · 400</p>
+                  <p class="lazy-display">2:00</p>
+                </div>
+                <div>
+                  <p class="lazy-note">Value · 600</p>
+                  <p class="lazy-value">350<span class="lazy-unit">ml</span></p>
+                </div>
               </div>
-              <p class="lazy-note">Tabular numerals keep changing values steady. Body 16px / 1.5. Controls ≥ 48px. Corners 10px. Focus 3px.</p>
+              <p class="lazy-note">
+                Tabular numerals keep changing values steady. Body 16px / 1.5. Controls ≥ 48px.
+                Corners 10px. Focus 3px.
+              </p>
             </div>
           </div>
         </section>
@@ -75,25 +112,62 @@
         <section id="controls" class="catalog-section" aria-labelledby="controls-title">
           <div class="catalog-section-heading">
             <h2 id="controls-title" class="lazy-heading">Small, dependable controls</h2>
-            <p class="lazy-note lazy-prose">Native HTML owns behavior. Shared CSS owns appearance. Try the controls or move through them with Tab.</p>
+            <p class="lazy-note lazy-prose">
+              Native HTML owns behavior. Shared CSS owns appearance. Try the controls or move
+              through them with Tab.
+            </p>
           </div>
           <div class="catalog-two-columns">
             <div class="catalog-control-samples">
               <h3 class="lazy-title">Actions</h3>
               <div class="catalog-actions">
-                <button type="button" class="lazy-button lazy-button--primary" data-example-action="Saved in this preview only.">Save changes</button>
-                <button type="button" class="lazy-button" data-example-action="The preview has been reset.">Reset</button>
-                <button type="button" class="lazy-button lazy-button--text" data-example-action="Use the field alongside to edit the amount.">Edit amount</button>
-                <button type="button" class="lazy-button lazy-button--icon" aria-label="Refresh preview" data-example-action="Preview refreshed."><svg class="catalog-icon" aria-hidden="true"><use href="#icon-refresh"/></svg></button>
+                <button
+                  type="button"
+                  class="lazy-button lazy-button--primary"
+                  data-example-action="Saved in this preview only."
+                >
+                  Save changes
+                </button>
+                <button
+                  type="button"
+                  class="lazy-button"
+                  data-example-action="The preview has been reset."
+                >
+                  Reset
+                </button>
+                <button
+                  type="button"
+                  class="lazy-button lazy-button--text"
+                  data-example-action="Use the field alongside to edit the amount."
+                >
+                  Edit amount
+                </button>
+                <button
+                  type="button"
+                  class="lazy-button lazy-button--icon"
+                  aria-label="Refresh preview"
+                  data-example-action="Preview refreshed."
+                >
+                  <svg class="catalog-icon" aria-hidden="true"><use href="#icon-refresh" /></svg>
+                </button>
               </div>
               <div class="catalog-actions">
-                <button type="button" class="lazy-button lazy-button--primary" disabled>Unavailable</button>
+                <button type="button" class="lazy-button lazy-button--primary" disabled>
+                  Unavailable
+                </button>
                 <button type="button" class="lazy-button" disabled aria-busy="true">Saving…</button>
               </div>
-              <p id="action-status" class="lazy-note catalog-status" role="status">Preview actions do not save application data.</p>
+              <p id="action-status" class="lazy-note catalog-status" role="status">
+                Preview actions do not save application data.
+              </p>
               <fieldset class="catalog-fieldset">
                 <legend class="lazy-label">Water volume</legend>
-                <div class="lazy-choices" role="group" aria-label="Water volume" id="volume-choices">
+                <div
+                  class="lazy-choices"
+                  role="group"
+                  aria-label="Water volume"
+                  id="volume-choices"
+                >
                   <button type="button" class="lazy-choice" aria-pressed="false">250 ml</button>
                   <button type="button" class="lazy-choice" aria-pressed="true">350 ml</button>
                   <button type="button" class="lazy-choice" aria-pressed="false">500 ml</button>
@@ -111,13 +185,33 @@
               <h3 class="lazy-title">Fields &amp; feedback</h3>
               <div class="lazy-field-group">
                 <label class="lazy-label" for="example-amount">Amount in ml</label>
-                <input class="lazy-field" id="example-amount" name="amount" type="number" min="1" max="10000" step="1" value="0" required aria-invalid="true" aria-describedby="amount-help amount-error">
+                <input
+                  class="lazy-field"
+                  id="example-amount"
+                  name="amount"
+                  type="number"
+                  min="1"
+                  max="10000"
+                  step="1"
+                  value="0"
+                  required
+                  aria-invalid="true"
+                  aria-describedby="amount-help amount-error"
+                />
                 <p id="amount-help" class="lazy-note">A whole number from 1 to 10,000.</p>
-                <p id="amount-error" class="lazy-error">Enter a whole number from 1 to 10,000 ml.</p>
+                <p id="amount-error" class="lazy-error">
+                  Enter a whole number from 1 to 10,000 ml.
+                </p>
               </div>
               <div class="lazy-field-group">
                 <label class="lazy-label" for="example-notes">Notes</label>
-                <textarea class="lazy-field" id="example-notes" name="notes" rows="2" placeholder="Anything to remember?"></textarea>
+                <textarea
+                  class="lazy-field"
+                  id="example-notes"
+                  name="notes"
+                  rows="2"
+                  placeholder="Anything to remember?"
+                ></textarea>
               </div>
               <div class="catalog-actions">
                 <button type="submit" class="lazy-button">Check amount</button>
@@ -130,53 +224,123 @@
         <section id="patterns" class="catalog-section" aria-labelledby="patterns-title">
           <div class="catalog-section-heading">
             <h2 id="patterns-title" class="lazy-heading">The same language, in context</h2>
-            <p class="lazy-note lazy-prose">Illustrative content for future migrations. These examples do not connect to your apps.</p>
+            <p class="lazy-note lazy-prose">
+              Illustrative content for future migrations. These examples do not connect to your
+              apps.
+            </p>
           </div>
           <div class="catalog-two-columns">
             <section aria-labelledby="plan-title">
-              <div class="catalog-pattern-heading"><h3 id="plan-title" class="lazy-title">A meal plan</h3><p class="lazy-note">lazy-diet pattern</p></div>
-              <div class="lazy-table-scroll" tabindex="0" role="region" aria-label="Example meal plan">
+              <div class="catalog-pattern-heading">
+                <h3 id="plan-title" class="lazy-title">A meal plan</h3>
+                <p class="lazy-note">lazy-diet pattern</p>
+              </div>
+              <div
+                class="lazy-table-scroll"
+                tabindex="0"
+                role="region"
+                aria-label="Example meal plan"
+              >
                 <table class="lazy-table">
-                  <caption class="lazy-sr-only">Illustrative meal plan for one day</caption>
-                  <thead><tr><th scope="col">Meal</th><th scope="col">Recipe</th><th scope="col">Time</th></tr></thead>
+                  <caption class="lazy-sr-only">
+                    Illustrative meal plan for one day
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Meal</th>
+                      <th scope="col">Recipe</th>
+                      <th scope="col">Time</th>
+                    </tr>
+                  </thead>
                   <tbody>
-                    <tr class="is-selected"><th scope="row">Breakfast<span class="lazy-sr-only">, selected</span></th><td>Avocado toast</td><td>20 min</td></tr>
-                    <tr><th scope="row">Lunch</th><td>Lentil soup</td><td>30 min</td></tr>
-                    <tr><th scope="row">Dinner</th><td>Cottage cheese omelette</td><td>15 min</td></tr>
+                    <tr class="is-selected">
+                      <th scope="row">Breakfast<span class="lazy-sr-only">, selected</span></th>
+                      <td>Avocado toast</td>
+                      <td>20 min</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Lunch</th>
+                      <td>Lentil soup</td>
+                      <td>30 min</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Dinner</th>
+                      <td>Cottage cheese omelette</td>
+                      <td>15 min</td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
-              <p class="lazy-note catalog-pattern-note">Rows and fine rules carry the structure. Selection adds a quiet surface.</p>
+              <p class="lazy-note catalog-pattern-note">
+                Rows and fine rules carry the structure. Selection adds a quiet surface.
+              </p>
             </section>
             <section aria-labelledby="list-title">
-              <div class="catalog-pattern-heading"><h3 id="list-title" class="lazy-title">A shopping list</h3><p class="lazy-note">lazy-list pattern</p></div>
+              <div class="catalog-pattern-heading">
+                <h3 id="list-title" class="lazy-title">A shopping list</h3>
+                <p class="lazy-note">lazy-list pattern</p>
+              </div>
               <ul class="catalog-shopping-list">
-                <li><label class="lazy-check"><input type="checkbox"><span>Rye bread</span><span class="catalog-quantity">180 g</span></label></li>
-                <li><label class="lazy-check"><input type="checkbox" checked><span>Avocado</span><span class="catalog-quantity">150 g</span></label></li>
-                <li><label class="lazy-check"><input type="checkbox"><span>Eggs</span><span class="catalog-quantity">3 pcs</span></label></li>
+                <li>
+                  <label class="lazy-check"
+                    ><input type="checkbox" /><span>Rye bread</span
+                    ><span class="catalog-quantity">180 g</span></label
+                  >
+                </li>
+                <li>
+                  <label class="lazy-check"
+                    ><input type="checkbox" checked /><span>Avocado</span
+                    ><span class="catalog-quantity">150 g</span></label
+                  >
+                </li>
+                <li>
+                  <label class="lazy-check"
+                    ><input type="checkbox" /><span>Eggs</span
+                    ><span class="catalog-quantity">3 pcs</span></label
+                  >
+                </li>
               </ul>
-              <p class="lazy-note catalog-pattern-note">Native checkboxes, generous touch targets, quantities aligned for scanning.</p>
+              <p class="lazy-note catalog-pattern-note">
+                Native checkboxes, generous touch targets, quantities aligned for scanning.
+              </p>
             </section>
           </div>
           <nav class="catalog-destinations" aria-label="Explore adoption examples">
             <a class="lazy-link-row" href="docs/migration.md#lazy-diet-react--vite">
-              <svg class="catalog-icon" aria-hidden="true"><use href="#icon-bowl"/></svg>
-              <span><strong>lazy-diet</strong><small>Meals, recipes and planning. Read the migration guide.</small></span>
-              <svg class="catalog-icon" aria-hidden="true"><use href="#icon-arrow"/></svg>
+              <svg class="catalog-icon" aria-hidden="true"><use href="#icon-bowl" /></svg>
+              <span
+                ><strong>lazy-diet</strong
+                ><small>Meals, recipes and planning. Read the migration guide.</small></span
+              >
+              <svg class="catalog-icon" aria-hidden="true"><use href="#icon-arrow" /></svg>
             </a>
             <a class="lazy-link-row" href="docs/migration.md#lazy-list-preact--hono--static-assets">
-              <svg class="catalog-icon" aria-hidden="true"><use href="#icon-list"/></svg>
-              <span><strong>lazy-list</strong><small>Shopping, with less friction. Read the migration guide.</small></span>
-              <svg class="catalog-icon" aria-hidden="true"><use href="#icon-arrow"/></svg>
+              <svg class="catalog-icon" aria-hidden="true"><use href="#icon-list" /></svg>
+              <span
+                ><strong>lazy-list</strong
+                ><small>Shopping, with less friction. Read the migration guide.</small></span
+              >
+              <svg class="catalog-icon" aria-hidden="true"><use href="#icon-arrow" /></svg>
             </a>
           </nav>
         </section>
 
-        <section id="adoption" class="catalog-section catalog-adoption" aria-labelledby="adoption-title">
+        <section
+          id="adoption"
+          class="catalog-section catalog-adoption"
+          aria-labelledby="adoption-title"
+        >
           <div>
             <h2 id="adoption-title" class="lazy-heading">Start with one import.</h2>
-            <p class="lazy-prose">Use the complete theme, or adopt tokens first. No framework dependency, external font service, or JavaScript runtime.</p>
-            <p><a href="docs/usage.md">Installation &amp; component guide</a> · <a href="docs/migration.md">Migration notes</a> · <a href="DESIGN.md">Design decisions</a></p>
+            <p class="lazy-prose">
+              Use the complete theme, or adopt tokens first. No framework dependency, external font
+              service, or JavaScript runtime.
+            </p>
+            <p>
+              <a href="docs/usage.md">Installation &amp; component guide</a> ·
+              <a href="docs/migration.md">Migration notes</a> ·
+              <a href="DESIGN.md">Design decisions</a>
+            </p>
           </div>
           <pre><code>import '@lazy/theme';
 
@@ -185,7 +349,9 @@
   data-lazy-theme="dark"&gt;</code></pre>
         </section>
       </main>
-      <footer class="catalog-footer lazy-note">lazy-theme · 0.1 · Extracted from the apps you already use.</footer>
+      <footer class="catalog-footer lazy-note">
+        lazy-theme · 0.1 · Extracted from the apps you already use.
+      </footer>
     </div>
   </body>
 </html>

@@ -2,20 +2,12 @@
   "name": "@lazy/theme",
   "version": "0.1.0",
   "description": "Shared paper-and-green design system for lazy applications",
-  "type": "module",
   "license": "MIT",
-  "sideEffects": [
-    "**/*.css"
-  ],
-  "style": "theme.css",
-  "exports": {
-    ".": "./theme.css",
-    "./tokens.css": "./css/tokens.css",
-    "./fonts.css": "./fonts.css",
-    "./base.css": "./css/base.css",
-    "./components.css": "./css/components.css",
-    "./fonts/*": "./fonts/*"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michalczukm/lazy-theme.git"
   },
+  "style": "theme.css",
   "files": [
     "theme.css",
     "fonts.css",
@@ -25,17 +17,33 @@
     "docs/migration.md",
     "docs/usage.md"
   ],
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": "./theme.css",
+    "./tokens.css": "./css/tokens.css",
+    "./fonts.css": "./fonts.css",
+    "./base.css": "./css/base.css",
+    "./components.css": "./css/components.css",
+    "./fonts/*": "./fonts/*"
+  },
   "scripts": {
     "dev": "python3 -m http.server 4188 --bind 127.0.0.1",
     "test": "node --test tests/*.test.mjs",
     "test:browser": "node scripts/browser-check.mjs",
-    "verify": "npm test && npm run test:browser && npm pack --dry-run"
+    "lint": "oxlint catalog.js scripts tests",
+    "fmt": "oxfmt .",
+    "fmt:check": "oxfmt --check .",
+    "verify": "pnpm test && pnpm lint && pnpm fmt:check && npm pack --dry-run"
+  },
+  "devDependencies": {
+    "oxfmt": "0.73.0",
+    "oxlint": "1.88.0"
   },
   "engines": {
     "node": ">=22"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/michalczukm/lazy-theme.git"
-  }
+  "packageManager": "pnpm@11.8.0"
 }

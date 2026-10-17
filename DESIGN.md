@@ -25,19 +25,19 @@ an additional proposal, not a replacement for the approved light baseline.
 
 `css/tokens.css` is the source of truth for every shared value.
 
-| Role | Light baseline | Dark proposal |
-| --- | --- | --- |
-| Background | `#fbfaf5` | `#222722` |
-| Surface | `#fbfaf5` | `#2c332c` |
-| Ink | `#263d33` | `#f4f4e9` |
-| Muted | `#58675c` | `#b8c4b5` |
-| Accent | `#59784f` | `#e8c46b` |
-| On accent / action | `#fbfaf5` | `#24291f` |
-| Soft / selected row | `#e5eadd` | `#363f32` |
-| Divider | `#cdd5ca` | `#56604e` |
-| Focus | `#263d33` | `#f0da8c` |
-| Error | `#8f392b` | `#ffa99d` |
-| Pressed neutral | `#d4dfcd` | `#414c3b` |
+| Role                | Light baseline | Dark proposal |
+| ------------------- | -------------- | ------------- |
+| Background          | `#fbfaf5`      | `#222722`     |
+| Surface             | `#fbfaf5`      | `#2c332c`     |
+| Ink                 | `#263d33`      | `#f4f4e9`     |
+| Muted               | `#58675c`      | `#b8c4b5`     |
+| Accent              | `#59784f`      | `#e8c46b`     |
+| On accent / action  | `#fbfaf5`      | `#24291f`     |
+| Soft / selected row | `#e5eadd`      | `#363f32`     |
+| Divider             | `#cdd5ca`      | `#56604e`     |
+| Focus               | `#263d33`      | `#f0da8c`     |
+| Error               | `#8f392b`      | `#ffa99d`     |
+| Pressed neutral     | `#d4dfcd`      | `#414c3b`     |
 
 The dark reference defines the first nine roles. Error uses lazy-list's
 existing dark error color. Pressed neutral is a new deeper sage interaction
@@ -62,17 +62,17 @@ Do not infer the action color from `ink`: that would create white buttons in dar
 
 ## Resolving baseline differences
 
-| Source difference | Shared decision |
-| --- | --- |
-| Tea `--bg` / `--surface`, extension `--paper` | `--lazy-color-bg` and `--lazy-color-surface` |
-| `Atkinson` vs full family name | Full family name; same files |
-| Focus offset 4 / 5px | 4px |
-| Refresh target 44px / tea controls 48px | Minimum 48px, 24px icon inside |
-| Extension adds pressed state | Preserve it as a semantic role |
-| Muted / lighter custom scrollbar | Muted for clearer affordance |
-| Page width 1240 / 1280px | Default 1280px; apps own specific composition |
-| Tea title 24px / dashboard headline 36px | Heading role scales 24–36px |
-| Countdown 88px / temperature 96px | Default display 88px; app can override the token |
+| Source difference                             | Shared decision                                  |
+| --------------------------------------------- | ------------------------------------------------ |
+| Tea `--bg` / `--surface`, extension `--paper` | `--lazy-color-bg` and `--lazy-color-surface`     |
+| `Atkinson` vs full family name                | Full family name; same files                     |
+| Focus offset 4 / 5px                          | 4px                                              |
+| Refresh target 44px / tea controls 48px       | Minimum 48px, 24px icon inside                   |
+| Extension adds pressed state                  | Preserve it as a semantic role                   |
+| Muted / lighter custom scrollbar              | Muted for clearer affordance                     |
+| Page width 1240 / 1280px                      | Default 1280px; apps own specific composition    |
+| Tea title 24px / dashboard headline 36px      | Heading role scales 24–36px                      |
+| Countdown 88px / temperature 96px             | Default display 88px; app can override the token |
 
 The extension's floating launcher is an exception: Shadow DOM isolation,
 system-ui, floating shadow, horizontal overflow, and menu focus management

@@ -37,8 +37,8 @@ publication is needed. A private Git repository requires CI read access.
 Import the theme from the web entry, before existing app CSS:
 
 ```js
-import '@lazy/theme';
-import './styles.css';
+import '@lazy/theme'
+import './styles.css'
 ```
 
 Add `class="lazy-theme" data-lazy-theme="light"` to `apps/web/index.html`'s root
@@ -52,15 +52,15 @@ people/portions, cooking steps, import review and responsive layouts.
 
 Specific visual mapping:
 
-| Existing pattern | Shared role |
-| --- | --- |
-| App background / white form surfaces | bg / surface |
-| Recipe text action | Text button or normal link, depending on behavior |
-| Selected recipe choice | `lazy-choice` with existing `aria-pressed` state |
-| Form input/select/textarea | `lazy-field`, separate label and message |
-| Form checkbox / cooking checklist | `lazy-check` wrapping a native checkbox |
-| Planner summaries / recipe tiles | App-owned composition using shared tokens |
-| Validation error | error color plus visible explanation |
+| Existing pattern                     | Shared role                                       |
+| ------------------------------------ | ------------------------------------------------- |
+| App background / white form surfaces | bg / surface                                      |
+| Recipe text action                   | Text button or normal link, depending on behavior |
+| Selected recipe choice               | `lazy-choice` with existing `aria-pressed` state  |
+| Form input/select/textarea           | `lazy-field`, separate label and message          |
+| Form checkbox / cooking checklist    | `lazy-check` wrapping a native checkbox           |
+| Planner summaries / recipe tiles     | App-owned composition using shared tokens         |
+| Validation error                     | error color plus visible explanation              |
 
 This is a visual migration; preserve conflict handling, validation, recipe review,
 planner changes, nutrition and portion calculations, and cooking progress.
@@ -105,13 +105,13 @@ expression (for example `color-mix(in srgb, var(--lazy-color-ink) 50%, transpare
 or retain a temporary, explicitly maintained RGB compatibility layer. Avoid
 shipping a duplicate independent palette or pretending a hex token is a channel.
 
-| Old role | Shared role |
-| --- | --- |
-| `bg`, `surface`, `muted`, `accent`, `soft`, `line` | Corresponding `--lazy-color-*` |
-| `fg` | `--lazy-color-ink` |
-| `on-accent` | `--lazy-color-on-accent` |
-| `danger` | `--lazy-color-error` |
-| Primary action fill | `--lazy-action-bg` (green ink in light, gold in dark) |
+| Old role                                           | Shared role                                           |
+| -------------------------------------------------- | ----------------------------------------------------- |
+| `bg`, `surface`, `muted`, `accent`, `soft`, `line` | Corresponding `--lazy-color-*`                        |
+| `fg`                                               | `--lazy-color-ink`                                    |
+| `on-accent`                                        | `--lazy-color-on-accent`                              |
+| `danger`                                           | `--lazy-color-error`                                  |
+| Primary action fill                                | `--lazy-action-bg` (green ink in light, gold in dark) |
 
 ### Keep preferences and the first paint consistent
 

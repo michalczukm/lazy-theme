@@ -50,14 +50,14 @@ deployment path. `npm pack` remains available for offline package snapshots.
 Import once, before app-specific styles:
 
 ```js
-import '@lazy/theme';
-import './styles.css';
+import '@lazy/theme'
+import './styles.css'
 ```
 
 Set the document root in the app's HTML shell:
 
 ```html
-<html lang="en" class="lazy-theme" data-lazy-theme="light">
+<html lang="en" class="lazy-theme" data-lazy-theme="light"></html>
 ```
 
 Use normal HTML classes, or `className` in React. Vite resolves font URLs and
@@ -76,7 +76,7 @@ cp -R node_modules/@lazy/theme/theme.css node_modules/@lazy/theme/fonts.css \
 ```
 
 ```html
-<link rel="stylesheet" href="/vendor/lazy-theme/theme.css">
+<link rel="stylesheet" href="/vendor/lazy-theme/theme.css" />
 ```
 
 Also add `lazy-theme` to `<html>`. Use a deployment-relative stylesheet URL if
@@ -87,20 +87,20 @@ ships the installed revision. A bundler-based app does not need this copy step.
 
 ### Adopt only what you need
 
-| Import | Responsibility |
-| --- | --- |
-| `@lazy/theme` | Complete theme; does not style the page until `.lazy-theme` is applied |
-| `@lazy/theme/tokens.css` | Shared variables only, no visual reset |
-| `@lazy/theme/fonts.css` | Font registrations, using relative local URLs |
-| `@lazy/theme/base.css` | Opt-in base rules; requires tokens and fonts |
-| `@lazy/theme/components.css` | Explicit `lazy-*` classes; requires tokens and base |
+| Import                       | Responsibility                                                         |
+| ---------------------------- | ---------------------------------------------------------------------- |
+| `@lazy/theme`                | Complete theme; does not style the page until `.lazy-theme` is applied |
+| `@lazy/theme/tokens.css`     | Shared variables only, no visual reset                                 |
+| `@lazy/theme/fonts.css`      | Font registrations, using relative local URLs                          |
+| `@lazy/theme/base.css`       | Opt-in base rules; requires tokens and fonts                           |
+| `@lazy/theme/components.css` | Explicit `lazy-*` classes; requires tokens and base                    |
 
 ## Light and dark
 
 Light is the default. Select the dark proposal explicitly on the root:
 
 ```html
-<html class="lazy-theme" data-lazy-theme="dark">
+<html class="lazy-theme" data-lazy-theme="dark"></html>
 ```
 
 For a runtime switch, set `document.documentElement.dataset.lazyTheme` to
@@ -119,26 +119,26 @@ Use semantic roles instead of copying hex values. Every value lives in
 [css/tokens.css](../css/tokens.css); visual decisions and source differences are in
 [DESIGN.md](../DESIGN.md).
 
-| Token | Use |
-| --- | --- |
-| `--lazy-color-bg`, `--lazy-color-surface` | Page and control surfaces |
-| `--lazy-color-ink`, `--lazy-color-muted` | Main and secondary text |
-| `--lazy-color-accent`, `--lazy-color-on-accent` | Links/icons and text on action fills |
-| `--lazy-color-soft`, `--lazy-color-pressed` | Quiet hover/selection and neutral press |
-| `--lazy-color-line` | Decorative separators; not the only field boundary |
-| `--lazy-color-focus`, `--lazy-color-error` | Keyboard focus and errors |
-| `--lazy-action-bg`, `--lazy-action-hover`, `--lazy-action-active` | Theme-aware primary/choice fills |
-| `--lazy-font-family`, `--lazy-font-regular/semibold/bold` | Family and weights 400/600/700 |
-| `--lazy-text-small/body/title/heading/wordmark/headline/display` | 14 / 16 / 18 / 24 / 32 / 36 / 88px at a 16px root |
-| `--lazy-leading-body/heading/display` | 1.5 / 1.2 / 1.15 line heights |
-| `--lazy-tracking-heading/wordmark` | −0.025em / −0.035em |
-| `--lazy-space-1/2/3/4/5/6/8/12` | 4 / 8 / 12 / 16 / 20 / 24 / 32 / 48px |
-| `--lazy-radius-control`, `--lazy-radius-icon` | 10px / 8px |
-| `--lazy-control-size`, `--lazy-control-size-primary` | 48px / 56px minimum targets |
-| `--lazy-page-width`, `--lazy-reading-width` | 1280px page / 65ch reading measure |
-| `--lazy-focus-width`, `--lazy-focus-offset` | 3px outline / 4px offset |
-| `--lazy-duration-state`, `--lazy-ease-state` | 160ms / ease-out |
-| `--lazy-scheme` | Native browser color scheme |
+| Token                                                             | Use                                                |
+| ----------------------------------------------------------------- | -------------------------------------------------- |
+| `--lazy-color-bg`, `--lazy-color-surface`                         | Page and control surfaces                          |
+| `--lazy-color-ink`, `--lazy-color-muted`                          | Main and secondary text                            |
+| `--lazy-color-accent`, `--lazy-color-on-accent`                   | Links/icons and text on action fills               |
+| `--lazy-color-soft`, `--lazy-color-pressed`                       | Quiet hover/selection and neutral press            |
+| `--lazy-color-line`                                               | Decorative separators; not the only field boundary |
+| `--lazy-color-focus`, `--lazy-color-error`                        | Keyboard focus and errors                          |
+| `--lazy-action-bg`, `--lazy-action-hover`, `--lazy-action-active` | Theme-aware primary/choice fills                   |
+| `--lazy-font-family`, `--lazy-font-regular/semibold/bold`         | Family and weights 400/600/700                     |
+| `--lazy-text-small/body/title/heading/wordmark/headline/display`  | 14 / 16 / 18 / 24 / 32 / 36 / 88px at a 16px root  |
+| `--lazy-leading-body/heading/display`                             | 1.5 / 1.2 / 1.15 line heights                      |
+| `--lazy-tracking-heading/wordmark`                                | −0.025em / −0.035em                                |
+| `--lazy-space-1/2/3/4/5/6/8/12`                                   | 4 / 8 / 12 / 16 / 20 / 24 / 32 / 48px              |
+| `--lazy-radius-control`, `--lazy-radius-icon`                     | 10px / 8px                                         |
+| `--lazy-control-size`, `--lazy-control-size-primary`              | 48px / 56px minimum targets                        |
+| `--lazy-page-width`, `--lazy-reading-width`                       | 1280px page / 65ch reading measure                 |
+| `--lazy-focus-width`, `--lazy-focus-offset`                       | 3px outline / 4px offset                           |
+| `--lazy-duration-state`, `--lazy-ease-state`                      | 160ms / ease-out                                   |
+| `--lazy-scheme`                                                   | Native browser color scheme                        |
 
 Typography and spacing use rem so browser font preferences remain effective.
 Override a role inside a specific app surface when real content calls for it;
@@ -147,21 +147,21 @@ keep semantic colors centralized. For example, a temperature display can set
 
 ## Component contract
 
-| Class | Expected element and behavior |
-| --- | --- |
-| `lazy-page`, `lazy-header` | Centered page and wrapping header; app owns columns |
-| `lazy-wordmark` | Brand link; final `<span aria-hidden="true">.</span>` uses accent |
-| `lazy-heading`, `lazy-title` | Semantic `h1`–`h3`; heading scales 24–36px |
-| `lazy-note`, `lazy-prose` | Secondary text / readable paragraph measure |
-| `lazy-value`, `lazy-display`, `lazy-unit` | Tabular numbers, large reading, smaller unit |
-| `lazy-button` | Secondary `button` or navigation `a`; use actual native semantics |
-| `lazy-button--primary/text/icon` | Modifier alongside `lazy-button` |
-| `lazy-choices`, `lazy-choice` | Button group; app updates `aria-pressed` |
-| `lazy-field-group`, `lazy-label`, `lazy-field`, `lazy-error` | Label + text/select/textarea field + feedback |
-| `lazy-check` | Label wrapping a native checkbox; text remains clickable |
-| `lazy-table-scroll`, `lazy-table` | Scroll region and semantic table; optional `is-selected` row |
-| `lazy-link-row` | Navigation link: leading SVG, text span with strong/small, trailing SVG |
-| `lazy-skip-link`, `lazy-sr-only` | Keyboard skip navigation and accessible hidden text |
+| Class                                                        | Expected element and behavior                                           |
+| ------------------------------------------------------------ | ----------------------------------------------------------------------- |
+| `lazy-page`, `lazy-header`                                   | Centered page and wrapping header; app owns columns                     |
+| `lazy-wordmark`                                              | Brand link; final `<span aria-hidden="true">.</span>` uses accent       |
+| `lazy-heading`, `lazy-title`                                 | Semantic `h1`–`h3`; heading scales 24–36px                              |
+| `lazy-note`, `lazy-prose`                                    | Secondary text / readable paragraph measure                             |
+| `lazy-value`, `lazy-display`, `lazy-unit`                    | Tabular numbers, large reading, smaller unit                            |
+| `lazy-button`                                                | Secondary `button` or navigation `a`; use actual native semantics       |
+| `lazy-button--primary/text/icon`                             | Modifier alongside `lazy-button`                                        |
+| `lazy-choices`, `lazy-choice`                                | Button group; app updates `aria-pressed`                                |
+| `lazy-field-group`, `lazy-label`, `lazy-field`, `lazy-error` | Label + text/select/textarea field + feedback                           |
+| `lazy-check`                                                 | Label wrapping a native checkbox; text remains clickable                |
+| `lazy-table-scroll`, `lazy-table`                            | Scroll region and semantic table; optional `is-selected` row            |
+| `lazy-link-row`                                              | Navigation link: leading SVG, text span with strong/small, trailing SVG |
+| `lazy-skip-link`, `lazy-sr-only`                             | Keyboard skip navigation and accessible hidden text                     |
 
 There is no JavaScript component API. The package supplies appearance; apps own
 state, validation, routing, menus, timers and network requests. Browser-native
@@ -190,8 +190,15 @@ links. Use pressed buttons for toggles, not fake tabs or radio controls.
 ```html
 <div class="lazy-field-group">
   <label class="lazy-label" for="amount">Amount in ml</label>
-  <input class="lazy-field" id="amount" type="number" min="1" required
-    aria-invalid="true" aria-describedby="amount-error">
+  <input
+    class="lazy-field"
+    id="amount"
+    type="number"
+    min="1"
+    required
+    aria-invalid="true"
+    aria-describedby="amount-error"
+  />
   <p class="lazy-error" id="amount-error">Enter an amount greater than zero.</p>
 </div>
 ```
@@ -217,20 +224,24 @@ static asset delivery, and a behavior-preservation checklist.
 
 ## Verify
 
-Node 22+ and Python 3 are needed for repository checks/preview. Browser checks
-also require the installed `agent-browser` CLI and its browser engine.
+Node 22+ and pnpm 11.8.0 are needed for repository checks. Python 3 is needed for
+the local preview. Browser checks require agent-browser 0.39.0 and its browser
+engine; installing that CLI through npm requires Node 24+.
 
 ```sh
-npm test                 # Palette contract and WCAG AA text/action pairs
-npm run test:browser     # Packed CSS/fonts, responsive states, screenshots
-npm pack --dry-run       # Inspect the distributable; no build step
-# Or all three:
-npm run verify
+pnpm install --frozen-lockfile
+pnpm verify             # Tests, lint, formatting and package contents
+pnpm test:browser       # Packed CSS/fonts, responsive states, screenshots
 ```
 
 The browser script uses a temporary local server, package snapshot and isolated
 browser session, closes them afterward, and writes images to ignored `artifacts/`.
 Check readability on the actual tablet before accepting a consuming app migration.
+
+GitHub Actions runs on pull requests and pushes to main. Its Node 22 verification
+job matches lazy-tea's test/lint/format setup and also checks package contents.
+A dependent Node 24 job installs the pinned browser CLI and runs browser checks.
+Both jobs must pass; concurrent runs on the same branch cancel older runs.
 
 Code/CSS: MIT, retaining the source attribution. Fonts: SIL OFL 1.1, included
 unchanged in [fonts/OFL.txt](../fonts/OFL.txt).
