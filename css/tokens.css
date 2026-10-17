@@ -1,0 +1,72 @@
+:root {
+  --lazy-color-bg: #fbfaf5;
+  --lazy-color-surface: #fbfaf5;
+  --lazy-color-ink: #263d33;
+  --lazy-color-muted: #58675c;
+  --lazy-color-accent: #59784f;
+  --lazy-color-on-accent: #fbfaf5;
+  --lazy-color-soft: #e5eadd;
+  --lazy-color-line: #cdd5ca;
+  --lazy-color-focus: #263d33;
+  --lazy-color-error: #8f392b;
+  --lazy-color-pressed: #d4dfcd;
+  --lazy-scheme: light;
+  --lazy-action-bg: var(--lazy-color-ink);
+  --lazy-action-hover: var(--lazy-color-accent);
+  --lazy-action-active: var(--lazy-color-ink);
+
+  --lazy-font-family: 'Atkinson Hyperlegible Next', sans-serif;
+  --lazy-font-regular: 400;
+  --lazy-font-semibold: 600;
+  --lazy-font-bold: 700;
+  --lazy-text-small: 0.875rem;
+  --lazy-text-body: 1rem;
+  --lazy-text-title: 1.125rem;
+  --lazy-text-heading: 1.5rem;
+  --lazy-text-wordmark: 2rem;
+  --lazy-text-headline: 2.25rem;
+  --lazy-text-display: 5.5rem;
+  --lazy-leading-body: 1.5;
+  --lazy-leading-heading: 1.2;
+  --lazy-leading-display: 1.15;
+  --lazy-tracking-heading: -0.025em;
+  --lazy-tracking-wordmark: -0.035em;
+
+  --lazy-space-1: 0.25rem;
+  --lazy-space-2: 0.5rem;
+  --lazy-space-3: 0.75rem;
+  --lazy-space-4: 1rem;
+  --lazy-space-5: 1.25rem;
+  --lazy-space-6: 1.5rem;
+  --lazy-space-8: 2rem;
+  --lazy-space-12: 3rem;
+  --lazy-radius-control: 0.625rem;
+  --lazy-radius-icon: 0.5rem;
+  --lazy-control-size: 3rem;
+  --lazy-control-size-primary: 3.5rem;
+  --lazy-page-width: 80rem;
+  --lazy-reading-width: 65ch;
+  --lazy-focus-width: 3px;
+  --lazy-focus-offset: 4px;
+  --lazy-duration-state: 160ms;
+  --lazy-ease-state: ease-out;
+}
+
+/* Explicit opt-in: no OS preference can silently replace the baseline. */
+:root[data-lazy-theme='dark'] {
+  --lazy-color-bg: #222722;
+  --lazy-color-surface: #2c332c;
+  --lazy-color-ink: #f4f4e9;
+  --lazy-color-muted: #b8c4b5;
+  --lazy-color-accent: #e8c46b;
+  --lazy-color-on-accent: #24291f;
+  --lazy-color-soft: #363f32;
+  --lazy-color-line: #56604e;
+  --lazy-color-focus: #f0da8c;
+  --lazy-color-error: #ffa99d;
+  --lazy-color-pressed: #414c3b;
+  --lazy-scheme: dark;
+  --lazy-action-bg: var(--lazy-color-accent);
+  --lazy-action-hover: var(--lazy-color-focus);
+  --lazy-action-active: var(--lazy-color-accent);
+}

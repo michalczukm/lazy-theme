@@ -1,0 +1,41 @@
+{
+  "name": "@lazy/theme",
+  "version": "0.1.0",
+  "description": "Shared paper-and-green design system for lazy applications",
+  "type": "module",
+  "license": "MIT",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "style": "theme.css",
+  "exports": {
+    ".": "./theme.css",
+    "./tokens.css": "./css/tokens.css",
+    "./fonts.css": "./fonts.css",
+    "./base.css": "./css/base.css",
+    "./components.css": "./css/components.css",
+    "./fonts/*": "./fonts/*"
+  },
+  "files": [
+    "theme.css",
+    "fonts.css",
+    "css",
+    "fonts",
+    "DESIGN.md",
+    "docs/migration.md",
+    "docs/usage.md"
+  ],
+  "scripts": {
+    "dev": "python3 -m http.server 4188 --bind 127.0.0.1",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node scripts/browser-check.mjs",
+    "verify": "npm test && npm run test:browser && npm pack --dry-run"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michalczukm/lazy-theme.git"
+  }
+}
